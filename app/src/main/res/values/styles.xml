@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- Pour la  Barre de status-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="android:textViewStyle">@style/TextView</item>
+    </style>
+
+    <style name="TextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">masterMindGame</string>
+
+    <string name="titreJeu">masterMindGame</string>
+    <string name="titreTemps">Temps</string>
+    <string name="titreInstructions">Instructions</string>
+    <string name="titreScores">Scores</string>
+
+
+    <string name="rank">#</string>
+    <string name="totalScore">Total Score :</string>
+    <string name="essaiesNombre">Total Tries Left :</string>
+
+
+    <string name="ressayer">Nouveau Jeu</string>
+    <string name="nouveauTemps">Nouveau Temps de Jeu</string>
+
+    </resources>

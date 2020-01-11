@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mastermindLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFont" >
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@android:color/white"
+        android:text=""
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/selection"
+        android:layout_below="@id/timer"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <!-- guess 6 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg17" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg17" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg18"
+                    android:layout_toRightOf="@+id/smallPeg19" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg18"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg17"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg18"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg19"
+                    android:onClick="select" />
+
+                <ImageView
+                    android:id="@+id/confirm05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg20"
+                    android:onClick="confirm" />
+            </RelativeLayout>
+
+            <!-- guess 5 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg21" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg21" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg22"
+                    android:layout_toRightOf="@+id/smallPeg23" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg22"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg21"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg22"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg23"
+                    android:onClick="select" />
+
+                <ImageView
+                    android:id="@+id/confirm06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg24"
+                    android:onClick="confirm" />
+            </RelativeLayout>
+
+            <!-- guess 4 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg25" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg26" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg26"
+                    android:layout_toRightOf="@+id/smallPeg27" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg26"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg25"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg26"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg27"
+                    android:onClick="select" />
+
+                <ImageView
+                    android:id="@+id/confirm07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg28"
+                    android:onClick="confirm" />
+            </RelativeLayout>
+
+            <!-- guess 3 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg29" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg29" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg30"
+                    android:layout_toRightOf="@+id/smallPeg31" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg30"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg29"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg30"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg31"
+                    android:onClick="select" />
+
+                <ImageView
+                    android:id="@+id/confirm08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg32"
+                    android:onClick="confirm" />
+            </RelativeLayout>
+
+            <!-- guess 2 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg33" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg33" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg34"
+                    android:layout_toRightOf="@+id/smallPeg35" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg34"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg33"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg34"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg35"
+                    android:onClick="select" />
+
+                <ImageView
+                    android:id="@+id/confirm09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg36"
+                    android:onClick="confirm" />
+            </RelativeLayout>
+
+            <!-- guess 1 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg37" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg37" />
+
+                <taxomania.games.mastermind.SmallPegSlot
+                    android:id="@+id/smallPeg40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smallPeg38"
+                    android:layout_toRightOf="@+id/smallPeg39" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/smallPeg38"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg37"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg38"
+                    android:onClick="select" />
+
+                <taxomania.games.mastermind.PegSlot
+                    android:id="@+id/peg40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg39"
+                    android:onClick="select" />
+
+                <ImageView
+                    android:id="@+id/confirm10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/peg40"
+                    android:onClick="confirm"
+                    android:src="@drawable/row" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- selection of pegs -->
+
+    <LinearLayout
+        android:id="@+id/selection"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/bluePeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bluepeg" />
+
+        <ImageView
+            android:id="@+id/greenPeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/greenpeg" />
+
+        <ImageView
+            android:id="@+id/redPeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/redpeg" />
+
+        <ImageView
+            android:id="@+id/whitePeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whitepeg" />
+
+        <ImageView
+            android:id="@+id/yellowPeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yellowpeg" />
+
+        <ImageView
+            android:id="@+id/purplePeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/purplepeg" />
+    </LinearLayout>
+
+</RelativeLayout>
